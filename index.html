@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ignite</title>
+    <link rel="stylesheet" href="./app.css">
+    <style>
+      .grayscale {
+        filter: grayscale(100%);
+      }
+
+      .opacity-95 {
+        opacity: 0.2;
+      }
+
+      #hero-image {
+        z-index: -10;
+        background:
+          linear-gradient(rgba(255,255,255,.95), rgba(255,255,255, .95)),
+          center / cover no-repeat url("./images/hero.jpg");
+        filter: grayscale(100%);
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="relative">
+      <div id="hero-image" class="absolute pin h-full"></div>
+
+      <div class="text-ignite-purple text-center">
+        <nav class="p-4">
+          <img class="h-full w-auto" src="./images/ignite.png" alt="Ignite Logo">
+        </nav>
+
+        <div class="p-4 md:max-w-xl md:m-auto">
+          <h1 class="px-2 py-8 text-ignite-grey text-5xl">Ignite</h1>
+          <p class="p-1 sm:px-2 sm:py-8 max-w-xl m-auto text-xl sm:text-5xl font-semibold">
+          The UK’s</br> distributed startup</br> support &amp; investment network.
+          </p>
+          <div class="inline-flex py-6 px-1">
+            <div class="p-1">
+              <a class="p-2 block border-2 border-ignite-purple rounded text-ignite-purple no-underline" href="https://igniteio.typeform.com/to/n59rRc">
+                Pre-Accelerator 
+              </a>
+            </div>
+            <div class="p-1">
+              <a class="p-2 block border-2 border-ignite-purple rounded text-ignite-purple no-underline" href="https://igniteio.typeform.com/to/CbneCC">
+                Aging Related
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+    <main>
+    <section id="pre-accelerator" class="text-ignite-white">
+      <div class="bg-ignite-red"> 
+        <div class="relative md:max-w-lg md:m-auto">
+          <img class="block grayscale opacity-95" src="./images/pre-accelerator.jpg" alt="Pre-Accelerator Image">
+          <div class="absolute pin">
+            <div class="flex items-center justify-center h-full">
+              <h2 class="text-center p-8 text-4xl underline tracking-normal">Pre-Accelerator</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-ignite-black">
+	<div class="p-6 text-lg leading-normal md:max-w-lg md:m-auto" style="line-height: 1.5em; letter-spacing: 0.02em">
+	  <p class="p-2">
+	  Our pre-accelerator is a day-long intensive course for founders at the beginning of their startup journey. If you’ve an idea you want to turn into a business, this is for you!
+	  </p>
+	  <p class="p-2">
+	  If accepted to join the day’s event, the Ignite team will share their experiences around product development, customer validation, fundraising and much more. You will also receive 1-1 mentoring and be given access the community of founders who have attended Ignite’s pre-accelerator events around the UK.
+	  </p>
+	  <p class="p-2">
+	  Apply if: You have an idea and are thinking about how you’ll take it to the next level (or figure out if it’s really worth doing).
+	  </p>
+	  <div class="text-center p-2">
+	    <a class="p-2 block border-2 border-white rounded text-white no-underline" href="https://igniteio.typeform.com/to/n59rRc">
+	      Pre-Accelerator 
+	    </a>
+	  </div>
+	</div>
+      </div>
+      
+    </section>
+
+    <section id="accelerator" class="text-ignite-white">
+      <div class="bg-ignite-yellow">
+	<div class="relative md:max-w-lg md:m-auto">
+	  <img class="block grayscale opacity-95" src="./images/accelerator.jpg" alt="Accelerator Image">
+	  <div class="absolute pin">
+	    <div class="flex items-center justify-center h-full">
+	      <h2 class="text-center p-8 text-4xl underline tracking-normal">Accelerator</h2>
+	    </div>
+	  </div>
+	</div>
+      </div>
+      
+      <div class="bg-ignite-purple">
+	<div class="p-6 text-lg leading-normal md:max-w-lg md:m-auto" style="line-height: 1.5em; letter-spacing: 0.02em">
+	  <p class="p-2">
+	  Our programme features 6 months’ mentoring and support, £25,000 investment and sees our cohort working alongside a range of startups from around the UK. Think of us as your remote Non-Executive Director; here to help as you scale your business!
+	  </p>
+	  <p class="p-2">
+	  We work with startups remotely for three weeks of every month, delivering our Startup MBA course digitally alongside our programme mentors and partners. The fourth week of every month sees cohort startups join us, portfolio companies and interviewing businesses for in-person offsites, which are held in 10 different cities around the UK each year. 
+	  </p>
+	  <p class="p-2">
+	  Apply if: You are a founding team of two or more with at least a Minimum Viable Product built and are able to commit to working full-time on your business.
+	  </p>
+	  <div class="text-center p-1">
+	    <a class="p-2 block border-2 border-white rounded text-white no-underline" href="https://igniteio.typeform.com/to/CbneCC">
+	      Aging Related
+	    </a>
+	  </div>
+	</div>
+      </div>
+      
+    </section>
+
+    <section id="team" class="flex justify-center flex-wrap p-2">
+      <div class="p-2 w-48 text-center">
+        <img class="rounded-full" src="./images/tristan.jpg" alt="Headshot of Tristan Watson">
+        <h3>Tristan Watson</h3>
+        <p>Managing Director</p>
+        <a href="https://twitter.com/tristanwatson">
+          <img class="w-8" src="./images/twitter.png" alt="Twitter Logo">
+        </a>
+      </div>
+
+      <div class="p-2 w-48 text-center">
+        <img class="rounded-full" src="./images/gabi.jpg" alt="Headshot of Gabi">
+        <h3>Gabriela Matic</h3>
+        <p>Programme Director</p>
+        <a href="https://twitter.com/gabrielaellala">
+          <img class="w-8" src="./images/twitter.png" alt="Twitter Logo">
+        </a>
+      </div>
+
+      <div class="p-2 w-48 text-center">
+        <img class="rounded-full" src="./images/wil.jpg" alt="Headshot of Wil">
+        <h3>Wil Benton</h3>
+        <p>Programme Director</p>
+        <a href="https://twitter.com/fatkidonfire">
+          <img class="w-8" src="./images/twitter.png" alt="Twitter Logo">
+        </a>
+      </div>
+
+      <div class="p-2 w-48 text-center">
+        <img class="rounded-full" src="./images/bailey.jpg" alt="Headshot of Bailey">
+        <h3>Bailey Kursar</h3>
+        <p>Entrepreneur in Residence</p>
+        <a href="https://twitter.com/baileytalks">
+          <img class="w-8" src="./images/twitter.png" alt="Twitter Logo">
+        </a>
+      </div>
+
+      <div class="p-2 w-48 text-center">
+        <img class="rounded-full" src="./images/jasper.jpg" alt="Headshot of Jasper">
+        <h3>Jasper Lyons</h3>
+        <p>Entrepreneur in Residence</p>
+        <a href="https://twitter.com/iOvrThoughtThis">
+          <img class="w-8" src="./images/twitter.png" alt="Twitter Logo">
+        </a>
+      </div>
+    </section>
+    </main>
+
+    <footer class="p-4 bg-ignite-black text-ignite-white">
+      <img class="p-2" src="./images/ignite.png" alt="Ignite Logo">
+      <p class="p-2">© 2018 Ignite Holdings Ltd</p>
+    </footer>
+  </body>
+</html>

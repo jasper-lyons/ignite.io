@@ -1,0 +1,15 @@
+{
+  "name": "ignite.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwind build -c tailwind.js -o app.css app.scss",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^0.6.4"
+  }
+}
