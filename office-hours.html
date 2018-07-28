@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ignite</title>
+    <link rel="stylesheet" href="./app.css">
+    <style>
+      .grayscale {
+        filter: grayscale(100%);
+      }
+
+      .opacity-95 {
+        opacity: 0.2;
+      }
+
+      .-z-10 {
+        z-index: -10;
+      }
+
+      .transition-bg {
+        transition: background 0.5s ease;
+        transition: color 0.5s ease;
+      }
+
+      .filter-invert {
+        filter: invert(100%);
+      }
+
+      #hero-image {
+        background:
+          linear-gradient(rgba(255,255,255,.90), rgba(255,255,255, .90)),
+          center / cover no-repeat url("./images/hero.jpg");
+        filter: grayscale(100%);
+      }
+
+      .p-10 {
+        padding: 2.5rem;
+      }
+
+      @media (max-width: 576px) {
+        nav > input[type="checkbox"]:checked ~ a {
+          display: inline;
+        }
+
+        nav > input[type="checkbox"] ~ a {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="relative">
+      <div class="absolute pin h-full -z-10">
+        <div id="hero-image" class="absolute pin -z-10"></div>
+      </div>
+
+      <div class="text-ignite-purple text-center relative">
+        <nav class="absolute pin-t pin-l pin-r sm:relative flex flex-col sm:flex-row justify-center items-center z-10">
+          <div class="absolute pin bg-ignite-purple sm:hidden -z-10"></div>
+          <label class="bg-ignite-purple text-ignite-white sm:hidden absolute pin-l pin-t" for="burger-menu">
+            <img class="h-10 p-1 block" src="./images/menu-icon.png" alt="Menu Icon">
+          </label>
+          <input id="burger-menu" class="hidden" type="checkbox">
+          <a class="p-2 text-ignite-white sm:text-ignite-purple" href="./office-hours">Office Hours</a>
+          <a class="p-2 text-ignite-white sm:text-ignite-purple" href="./faq">FAQ</a>
+          <a class="p-2 text-ignite-white sm:text-ignite-purple" href="https://blog.ignite.io/">Blog</a>
+          <a class="p-2 text-ignite-white sm:text-ignite-purple" href="./portfolio">Portfolio</a>
+          <a class="p-2 text-ignite-white sm:text-ignite-purple" href="./contact">Contact</a>
+        </nav>
+
+        <div class="p-4 md:max-w-xl md:m-auto">
+          <a href="#">
+            <img class="h-24 filter-invert" src="./images/ignite.png" alt="Ignite Logo">
+          </a>
+          <h1 class="p-1 sm:px-2 sm:pt-8 sm:pb-4 max-w-xl m-auto text-3xl sm:text-5xl font-semibold">
+            Office Hours
+          </h1>
+          <p class="py-4 text-lg">
+            It helps to have someone else to talk to – and we’re here to chat! 
+          </p>
+        </div>
+      </div>
+
+    </header>
+
+    <main>
+    <section id="office-hours" class="text-ignite-white">
+      <div class="bg-ignite-black">
+        <div class="p-6 sm:text-lg leading-normal md:max-w-lg md:m-auto">
+          <p class="p-2">
+          The Ignite team are available on a regular basis to talk about a range of startup-related topics. 
+          </p>
+          <p class="p-2">
+          If you’re looking for feedback on your idea, advice on raising funding, how to hire staff, or looking to get more information on any of our programmes, you can book a slot with us to talk about it via video chat every Thursday. 
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="book-office-hours" class="text-ignite-white">
+      <div class="bg-white">
+        <div class="px-8 md:text-lg leading-normal md:max-w-lg md:m-auto">
+          <!-- Calendly inline widget begin -->
+          <div class="calendly-inline-widget" data-url="https://calendly.com/ignite-accelerator/office-hours" style="min-width:320px;height:1020px;"></div>
+          <script type="text/javascript" src="https://calendly.com/assets/external/widget.js"></script>
+          <!-- Calendly inline widget end -->
+        </div>
+      </div>
+    </section>
+    </main>
+
+    <footer class="p-4 bg-ignite-black text-ignite-white">
+      <img class="p-2 h-24" src="./images/ignite.png" alt="Ignite Logo">
+      <p class="py-2 px-6">© 2018 Ignite Holdings Ltd</p>
+    </footer>
+  </body>
+</html>
