@@ -23,6 +23,10 @@
         transition: color 0.5s ease;
       }
 
+      .filter-invert {
+        filter: invert(100%);
+      }
+
       #hero-image {
         background:
           linear-gradient(rgba(255,255,255,.90), rgba(255,255,255, .90)),
@@ -55,7 +59,7 @@
             stroke-linejoin="bevel"
             stroke-miterlimit="10"
             d="
-              M 90, -20
+              M 90, -50
               L 90, 0
               C 90, 20
                 110, 20
@@ -69,11 +73,11 @@
             stroke-linejoin="bevel"
             stroke-miterlimit="10"
             d="
-              M 172, 50
-              C 172, 50
-                150, 50
-                150, 80
-              L 150, 100
+              M 182, 50
+              C 182, 50
+                160, 50
+                160, 80
+              L 160, 100
               "
             />
 
@@ -84,7 +88,7 @@
             stroke-linejoin="bevel"
             stroke-miterlimit="10"
             d="
-              M -72, 105
+              M -92, 105
               L -60, 105
               C -30, 105
                 -30, 80
@@ -96,13 +100,15 @@
 
       <div class="text-ignite-purple text-center">
         <nav class="p-4">
-          <img class="h-full w-auto" src="./images/ignite.png" alt="Ignite Logo">
         </nav>
 
         <div class="p-4 md:max-w-xl md:m-auto">
-          <h1 class="px-2 py-8 text-ignite-grey text-5xl">Ignite</h1>
-          <p class="p-1 sm:px-2 sm:py-8 max-w-xl m-auto text-xl sm:text-5xl font-semibold">
-          The UK’s</br> distributed startup</br> support &amp; investment network.
+          <img class="h-24 filter-invert" src="./images/ignite.png" alt="Ignite Logo">
+          <h1 class="p-1 sm:px-2 sm:py-8 max-w-xl m-auto text-3xl sm:text-5xl font-semibold">
+            Helping UK-based</br> entrepreneurs build better businesses.
+          </h1>
+          <p class="py-4 sm:p-0 text-lg">
+            We’ve been running pre-accelerator and accelerator programmes around the U.K. since 2011. Ignite has invested in 130+ businesses and has mentored and supported hundreds more. 
           </p>
           <div class="inline-flex py-6 px-2">
             <div class="p-2">
@@ -136,19 +142,51 @@
       <div class="bg-ignite-black">
 	<div class="p-6 text-lg leading-normal md:max-w-lg md:m-auto" style="line-height: 1.5em; letter-spacing: 0.02em">
 	  <p class="p-2">
-	  Our pre-accelerator is a day-long intensive course for founders at the beginning of their startup journey. If you’ve an idea you want to turn into a business, this is for you!
+            The pre-accelerator is a 3 month full-time programme that helps entrepreneurs to develop their business idea, launch an MVP, get their first customers and figure out what to do next. We are looking for entrepreneurs who want to solve (or already solving) real-world problems with innovative technology-led ideas.
 	  </p>
 	  <p class="p-2">
-	  If accepted to join the day’s event, the Ignite team will share their experiences around product development, customer validation, fundraising and much more. You will also receive 1-1 mentoring and be given access the community of founders who have attended Ignite’s pre-accelerator events around the UK.
+            The pre-accelerator programme includes:
+            <ul>
+              <li>
+                3-month course covering product development, marketing, sales, operations, hiring and fundraising
+              </li>
+              <li>
+                Mentoring from experienced entrepreneurs, mentors and investors
+              </li>
+              <li>
+                3 months of office space in Newcastle (with the potential for discounts post-programme) 
+              </li>
+              <li>
+                A fast-track to the final interviews of next Ignite accelerator programme (in the following year).
+              </li>
+            </ul>
 	  </p>
+          <p class="p-2">
+            Apply if: You have an idea and are thinking about how you’ll take it to the next level (or figure out if it’s really worth doing). 
+          </p>
+
+          <div class="text-center p-2 flex-column md:flex-row">
+            <div class="p-2">
+              <a class="p-2 block border-2 border-white rounded text-white no-underline hover:bg-ignite-white hover:text-ignite-black transition-bg" href="https://igniteio.typeform.com/to/n59rRc">
+                Apply
+              </a>
+            </div>
+          </div>
+
 	  <p class="p-2">
-	  Apply if: You have an idea and are thinking about how you’ll take it to the next level (or figure out if it’s really worth doing).
+            Tapping into the North East’s world-class expertise in both data and ageing, we are especially keen to talk to founders looking to work on ageing-related or data-driven issues! 
 	  </p>
-	  <div class="text-center p-2">
-	    <a class="p-2 block border-2 border-white rounded text-white no-underline" href="https://igniteio.typeform.com/to/n59rRc">
-	      Pre-Accelerator 
-	    </a>
+
+	  <div class="text-center p-2 flex-column md:flex-row">
+            <div class="p-2">
+              <a class="p-2 block border-2 border-white rounded text-white no-underline hover:bg-ignite-white hover:text-ignite-black transition-bg" href="https://igniteio.typeform.com/to/n59rRc">
+                Apply with Aging // Data Focus
+              </a>
+            </div>
 	  </div>
+          <p class="p-2 italic">
+            The pre-accelerator is only open to founders or companies based in the North East (County Durham, Northumberland and Tyne and Wear). 
+          </p>
 	</div>
       </div>
       
@@ -169,75 +207,88 @@
       <div class="bg-ignite-purple">
 	<div class="p-6 text-lg leading-normal md:max-w-lg md:m-auto" style="line-height: 1.5em; letter-spacing: 0.02em">
 	  <p class="p-2">
-	  Our programme features 6 months’ mentoring and support, £25,000 investment and sees our cohort working alongside a range of startups from around the UK. Think of us as your remote Non-Executive Director; here to help as you scale your business!
+            The Ignite accelerator is a 6 month remote programme that features £25,000 net (equity) investment, up to £100,000 AWS, Google Cloud or Microsoft Azure credits, mentoring and startup support and much more. 
 	  </p>
 	  <p class="p-2">
-	  We work with startups remotely for three weeks of every month, delivering our Startup MBA course digitally alongside our programme mentors and partners. The fourth week of every month sees cohort startups join us, portfolio companies and interviewing businesses for in-person offsites, which are held in 10 different cities around the UK each year. 
+            We work with startups on the programme remotely for three weeks of the month, delivering our Startup MBA course digitally alongside our programme mentors and partners. The fourth week of every month brings the Ignite team, programme businesses and startups from across the Ignite portfolio together for in-person offsites. 
 	  </p>
 	  <p class="p-2">
-	  Apply if: You are a founding team of two or more with at least a Minimum Viable Product built and are able to commit to working full-time on your business.
+            Apply if: You are a founding team of two or more, working full-time on your technology startup, and need help scaling and potentially raising further investment.
 	  </p>
 	  <div class="text-center p-1">
-	    <a class="p-2 block border-2 border-white rounded text-white no-underline" href="https://igniteio.typeform.com/to/CbneCC">
-	      Aging Related
+	    <a class="p-2 block border-2 border-white rounded text-white no-underline hover:bg-ignite-white hover:text-ignite-black" href="https://igniteio.typeform.com/to/CbneCC">
+	      Apply
 	    </a>
 	  </div>
+          <p class="p-2 italic">
+            Applications for the next accelerator cohort will open September 2018. The accelerator will only be open to companies based, or with a material presence, in the North East (County Durham, Northumberland and Tyne and Wear).
+          </p>
 	</div>
       </div>
       
     </section>
 
-    <section id="team" class="flex justify-center flex-wrap p-2">
+    <section id="team" class="flex justify-center flex-wrap p-4">
       <div class="p-2 w-48 text-center">
         <img class="rounded-full" src="./images/tristan.jpg" alt="Headshot of Tristan Watson">
         <h3>Tristan Watson</h3>
         <p>Managing Director</p>
-        <a href="https://twitter.com/tristanwatson">
-          <img class="w-8" src="./images/twitter.png" alt="Twitter Logo">
-        </a>
+        <div class="p-2">
+          <a href="https://twitter.com/tristanwatson">
+            <img class="bg-blue-light w-8" src="./images/twitter.png" alt="Twitter Logo">
+          </a>
+        </div>
       </div>
 
       <div class="p-2 w-48 text-center">
         <img class="rounded-full" src="./images/gabi.jpg" alt="Headshot of Gabi">
         <h3>Gabriela Matic</h3>
         <p>Programme Director</p>
-        <a href="https://twitter.com/gabrielaellala">
-          <img class="w-8" src="./images/twitter.png" alt="Twitter Logo">
-        </a>
+        <div class="p-2">
+          <a href="https://twitter.com/gabrielaellala">
+            <img class="bg-blue-light w-8" src="./images/twitter.png" alt="Twitter Logo">
+          </a>
+        </div>
       </div>
 
       <div class="p-2 w-48 text-center">
         <img class="rounded-full" src="./images/wil.jpg" alt="Headshot of Wil">
         <h3>Wil Benton</h3>
         <p>Programme Director</p>
-        <a href="https://twitter.com/fatkidonfire">
-          <img class="w-8" src="./images/twitter.png" alt="Twitter Logo">
-        </a>
+        <div class="p-2">
+          <a href="https://twitter.com/fatkidonfire">
+            <img class="bg-blue-light w-8" src="./images/twitter.png" alt="Twitter Logo">
+          </a>
+        </div>
       </div>
 
       <div class="p-2 w-48 text-center">
         <img class="rounded-full" src="./images/bailey.jpg" alt="Headshot of Bailey">
         <h3>Bailey Kursar</h3>
         <p>Entrepreneur in Residence</p>
-        <a href="https://twitter.com/baileytalks">
-          <img class="w-8" src="./images/twitter.png" alt="Twitter Logo">
-        </a>
+        <div class="p-2">
+          <a href="https://twitter.com/baileytalks">
+            <img class="bg-blue-light w-8" src="./images/twitter.png" alt="Twitter Logo">
+          </a>
+        </div>
       </div>
 
       <div class="p-2 w-48 text-center">
         <img class="rounded-full" src="./images/jasper.jpg" alt="Headshot of Jasper">
         <h3>Jasper Lyons</h3>
         <p>Entrepreneur in Residence</p>
-        <a href="https://twitter.com/iOvrThoughtThis">
-          <img class="w-8" src="./images/twitter.png" alt="Twitter Logo">
-        </a>
+        <div class="p-2">
+          <a href="https://twitter.com/iOvrThoughtThis">
+            <img class="bg-blue-light w-8" src="./images/twitter.png" alt="Twitter Logo">
+          </a>
+        </div>
       </div>
     </section>
     </main>
 
     <footer class="p-4 bg-ignite-black text-ignite-white">
-      <img class="p-2" src="./images/ignite.png" alt="Ignite Logo">
-      <p class="p-2">© 2018 Ignite Holdings Ltd</p>
+      <img class="p-2 h-24" src="./images/ignite.png" alt="Ignite Logo">
+      <p class="py-2 px-6">© 2018 Ignite Holdings Ltd</p>
     </footer>
   </body>
 </html>
