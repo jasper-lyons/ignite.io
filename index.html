@@ -14,10 +14,18 @@
         opacity: 0.2;
       }
 
-      #hero-image {
+      .-z-10 {
         z-index: -10;
+      }
+
+      .transition-bg {
+        transition: background 0.5s ease;
+        transition: color 0.5s ease;
+      }
+
+      #hero-image {
         background:
-          linear-gradient(rgba(255,255,255,.95), rgba(255,255,255, .95)),
+          linear-gradient(rgba(255,255,255,.90), rgba(255,255,255, .90)),
           center / cover no-repeat url("./images/hero.jpg");
         filter: grayscale(100%);
       }
@@ -26,7 +34,64 @@
   <body>
 
     <header class="relative">
-      <div id="hero-image" class="absolute pin h-full"></div>
+      <div class="absolute pin h-full -z-10">
+        <div id="hero-image" class="absolute pin -z-10"></div>
+        <svg viewBox="0 0 100 100" class="h-full w-full">
+          <path
+            fill="none"
+            stroke="#6bc0b6"
+            stroke-width="25"
+            stroke-linejoin="bevel"
+            stroke-miterlimit="10"
+            d="
+              M -20, 0
+              l 0, 40"
+            />
+
+          <path
+            fill="none"
+            stroke="#f19235 "
+            stroke-width="25"
+            stroke-linejoin="bevel"
+            stroke-miterlimit="10"
+            d="
+              M 75, 0
+              C 75, 0
+                75, 22
+                100, 22"
+            />
+
+          <path
+            fill="none"
+            stroke="#77428f"
+            stroke-width="25"
+            stroke-linejoin="bevel"
+            stroke-miterlimit="10"
+            d="
+              M 172, 50
+              C 172, 50
+                150, 50
+                150, 80
+              L 150, 100
+              "
+            />
+
+          <path
+            fill="none"
+            stroke="#e4373f"
+            stroke-width="25"
+            stroke-linejoin="bevel"
+            stroke-miterlimit="10"
+            d="
+              M -72, 105
+              L -60, 105
+              C -30, 105
+                -30, 80
+                -30, 80
+              "
+            />
+        </svg>
+      </div>
 
       <div class="text-ignite-purple text-center">
         <nav class="p-4">
@@ -38,14 +103,14 @@
           <p class="p-1 sm:px-2 sm:py-8 max-w-xl m-auto text-xl sm:text-5xl font-semibold">
           The UK’s</br> distributed startup</br> support &amp; investment network.
           </p>
-          <div class="inline-flex py-6 px-1">
-            <div class="p-1">
-              <a class="p-2 block border-2 border-ignite-purple rounded text-ignite-purple no-underline" href="https://igniteio.typeform.com/to/n59rRc">
+          <div class="inline-flex py-6 px-2">
+            <div class="p-2">
+              <a class="p-4 block border-2 border-ignite-purple rounded text-lg text-ignite-purple no-underline hover:bg-ignite-purple hover:text-white transition-bg" href="https://igniteio.typeform.com/to/n59rRc">
                 Pre-Accelerator 
               </a>
             </div>
-            <div class="p-1">
-              <a class="p-2 block border-2 border-ignite-purple rounded text-ignite-purple no-underline" href="https://igniteio.typeform.com/to/CbneCC">
+            <div class="p-2">
+              <a class="p-4 block border-2 border-ignite-purple rounded text-lg text-ignite-purple no-underline hover:bg-ignite-purple hover:text-white transition-bg" href="https://igniteio.typeform.com/to/CbneCC">
                 Aging Related
               </a>
             </div>
