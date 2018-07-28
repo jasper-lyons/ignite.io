@@ -73,7 +73,30 @@
           display: none;
         }
       }
+
+      .opaque-nav {
+
+      }
     </style>
+
+    <script>
+      // onces the view port is ~ past the header, change the nav bar to
+      // bg-purple, text-white
+      var set = false;
+
+      window.onscroll = function () {
+        var header = document.querySelector('header');
+        var nav = document.querySelector('nav');
+
+        if (!set && this.scrollY > header.offsetHeight) {
+          nav.className += ' opaque-nav';
+          set = true;
+        } else if (set && this.scrollY < header.offsetHeight) {
+          nav.className = nav.className.replace(' opaque-nav', '');
+          set = false;
+        }
+      };
+    </script>
   </head>
   <body>
 
@@ -83,7 +106,8 @@
       </div>
 
       <div class="text-ignite-purple text-center relative">
-        <nav class="absolute pin-t pin-l pin-r sm:relative flex flex-col sm:flex-row justify-center items-center z-10">
+        <div class="h-24"></div>
+        <nav class="fixed pin-t pin-l pin-r flex flex-col sm:flex-row justify-center items-center z-10">
           <div class="absolute pin bg-ignite-purple sm:hidden -z-10"></div>
           <label class="bg-ignite-purple text-ignite-white sm:hidden absolute pin-l pin-t" for="burger-menu">
             <img class="h-10 p-1 block" src="./images/menu-icon.png" alt="Menu Icon">
@@ -92,6 +116,7 @@
           <a href="#">
             <img class="h-10 sm:filter-invert" src="./images/ignite.png" alt="Ignite Logo">
           </a>
+          <a class="p-2 text-ignite-white sm:text-ignite-purple" href="#team">Team</a>
           <a class="p-2 text-ignite-white sm:text-ignite-purple" href="./office-hours">Office Hours</a>
           <a class="p-2 text-ignite-white sm:text-ignite-purple" href="./faq">FAQ</a>
           <a class="p-2 text-ignite-white sm:text-ignite-purple" href="https://blog.ignite.io/">Blog</a>
@@ -237,67 +262,94 @@
       
     </section>
 
-    <section id="team" class="flex justify-center flex-wrap p-4">
-      <div class="p-2 w-48 text-center">
-        <img class="rounded-full" src="./images/tristan.jpg" alt="Headshot of Tristan Watson">
-        <h3>Tristan Watson</h3>
-        <p>Managing Director</p>
-        <div class="p-2">
-          <a href="https://twitter.com/tristanwatson">
-            <img class="bg-blue-light w-8" src="./images/twitter.png" alt="Twitter Logo">
-          </a>
-        </div>
-      </div>
+    <section id="team" class="text-center">
+      <h2 class="p-8 text-4xl underline">Our Team</h2>
 
-      <div class="p-2 w-48 text-center">
-        <img class="rounded-full" src="./images/gabi.jpg" alt="Headshot of Gabi">
-        <h3>Gabriela Matic</h3>
-        <p>Programme Director</p>
-        <div class="p-2">
-          <a href="https://twitter.com/gabrielaellala">
-            <img class="bg-blue-light w-8" src="./images/twitter.png" alt="Twitter Logo">
-          </a>
+      <div class="flex justify-around flex-wrap p-2">
+        <div class="p-4 w-48 text-center">
+          <img class="rounded-full" src="./images/tristan.jpg" alt="Headshot of Tristan Watson">
+          <h3>Tristan Watson</h3>
+          <p>Managing Director</p>
+          <div class="p-2">
+            <a href="https://twitter.com/tristanwatson">
+              <img class="bg-blue-light w-8" src="./images/twitter.png" alt="Twitter Logo">
+            </a>
+          </div>
         </div>
-      </div>
 
-      <div class="p-2 w-48 text-center">
-        <img class="rounded-full" src="./images/wil.jpg" alt="Headshot of Wil">
-        <h3>Wil Benton</h3>
-        <p>Programme Director</p>
-        <div class="p-2">
-          <a href="https://twitter.com/fatkidonfire">
-            <img class="bg-blue-light w-8" src="./images/twitter.png" alt="Twitter Logo">
-          </a>
+        <div class="p-4 w-48 text-center">
+          <img class="rounded-full" src="./images/gabi.jpg" alt="Headshot of Gabi">
+          <h3>Gabriela Matic</h3>
+          <p>Programme Director</p>
+          <div class="p-2">
+            <a href="https://twitter.com/gabrielaellala">
+              <img class="bg-blue-light w-8" src="./images/twitter.png" alt="Twitter Logo">
+            </a>
+          </div>
         </div>
-      </div>
 
-      <div class="p-2 w-48 text-center">
-        <img class="rounded-full" src="./images/bailey.jpg" alt="Headshot of Bailey">
-        <h3>Bailey Kursar</h3>
-        <p>Entrepreneur in Residence</p>
-        <div class="p-2">
-          <a href="https://twitter.com/baileytalks">
-            <img class="bg-blue-light w-8" src="./images/twitter.png" alt="Twitter Logo">
-          </a>
+        <div class="p-4 w-48 text-center">
+          <img class="rounded-full" src="./images/wil.jpg" alt="Headshot of Wil">
+          <h3>Wil Benton</h3>
+          <p>Programme Director</p>
+          <div class="p-2">
+            <a href="https://twitter.com/fatkidonfire">
+              <img class="bg-blue-light w-8" src="./images/twitter.png" alt="Twitter Logo">
+            </a>
+          </div>
         </div>
-      </div>
 
-      <div class="p-2 w-48 text-center">
-        <img class="rounded-full" src="./images/jasper.jpg" alt="Headshot of Jasper">
-        <h3>Jasper Lyons</h3>
-        <p>Entrepreneur in Residence</p>
-        <div class="p-2">
-          <a href="https://twitter.com/iOvrThoughtThis">
-            <img class="bg-blue-light w-8" src="./images/twitter.png" alt="Twitter Logo">
-          </a>
+        <div class="p-4 w-48 text-center">
+          <img class="rounded-full" src="./images/bailey.jpg" alt="Headshot of Bailey">
+          <h3>Bailey Kursar</h3>
+          <p>Entrepreneur in Residence</p>
+          <div class="p-2">
+            <a href="https://twitter.com/baileytalks">
+              <img class="bg-blue-light w-8" src="./images/twitter.png" alt="Twitter Logo">
+            </a>
+          </div>
+        </div>
+
+        <div class="p-4 w-48 text-center">
+          <img class="rounded-full" src="./images/jasper.jpg" alt="Headshot of Jasper">
+          <h3>Jasper Lyons</h3>
+          <p>Entrepreneur in Residence</p>
+          <div class="p-2">
+            <a href="https://twitter.com/iOvrThoughtThis">
+              <img class="bg-blue-light w-8" src="./images/twitter.png" alt="Twitter Logo">
+            </a>
+          </div>
         </div>
       </div>
     </section>
     </main>
 
-    <footer class="p-4 bg-ignite-black text-ignite-white">
-      <img class="p-2 h-24" src="./images/ignite.png" alt="Ignite Logo">
-      <p class="py-2 px-6">© 2018 Ignite Holdings Ltd</p>
+    <footer class="p-4 bg-ignite-black text-sm leading-normal text-ignite-white flex flex-col md:flex-row justify-center">
+      <div class="w-64">
+        <a href="#" class="w-full">
+          <img class="block w-full" src="./images/ignite.png" alt="Ignite Logo">
+        </a>
+      </div>
+      <div class="w-64 py-4 px-8">
+        <p>
+          Ignite is a UK-based distributed startup support and investment network. Originally founded in Newcastle in 2011, Ignite has accelerated over 100 startups and invests in 10-20 companies per year.
+        </p>
+      </div>
+      <div class="w-48 py-4 px-8">
+        <ul class="list-reset">
+          <li><a class="text-ignite-white" href="./#programmes">Programmes</a></li>
+          <li><a class="text-ignite-white" href="./#team">Team</a></li>
+          <li><a class="text-ignite-white" href="./officehours">Office Hours</a></li>
+          <li><a class="text-ignite-white" href="./faq">FAQ</a></li>
+          <li><a class="text-ignite-white" href="https://blog.ignite.io">Blog</a></li>
+          <li><a class="text-ignite-white" href="./companies">Portfolio</a></li>
+          <li><a class="text-ignite-white" href="./contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="w-64 py-4 px-8">
+        <p class="footer-text">&copy; 2018 Ignite Holdings Ltd</p>
+        <p class="footer-text">Registered office:<br />Campus North<br />Sunco House<br />5 Carliol Square<br />Newcastle<br />NE1 6UF</p>
+      </div>
     </footer>
   </body>
 </html>

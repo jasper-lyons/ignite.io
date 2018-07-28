@@ -605,6 +605,18 @@ table {
   border-collapse: collapse;
 }
 
+.opaque-nav {
+  background-color: #77428f;
+}
+
+.opaque-nav a {
+  color: #f7f8fa;
+}
+
+.opaque-nav img {
+  filter: none;
+}
+
 .list-reset {
   list-style: none;
   padding: 0;

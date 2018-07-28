@@ -1,2 +1,15 @@
 @tailwind preflight;
+
+.opaque-nav {
+  @apply bg-ignite-purple;
+}
+
+.opaque-nav a {
+  @apply text-ignite-white;
+}
+
+.opaque-nav img {
+  filter: none;
+}
+
 @tailwind utilities;
