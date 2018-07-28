@@ -1,9 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Ignite Accelerator </title>
+    <meta name="description" content="Ignite is a distributed startup support and investment network. Apply for 6 months location-independent support that works around your location, &pound;25,000 investment and much more.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ignite</title>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <meta property="og:url" content="https://ignite.io" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ignite Accelerator" />
+    <meta property="og:description" content="Europe's #1 distributed startup support and investment network." />
+    <meta property="og:image" content="https://ignite.io/apple-touch-icon.png" />
+
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://ignite.io" />
+    <meta property="twitter:title" content="Ignite Accelerator" />
+    <meta property="twitter:description" content="Europe's #1 distributed startup support and investment network." />
+    <meta property="twitter:image" content="https://ignite.io/apple-touch-icon.png" />
+
     <link rel="stylesheet" href="./app.css">
     <style>
       .opacity-10 {
@@ -26,8 +42,18 @@
         filter: invert(100%);
       }
 
+      @media (min-width: 576px) {
+        .sm\:filter-invert {
+          filter: invert(100%);
+        }
+      }
+
       .filter-grayscale {
         filter: grayscale(100%);
+      }
+
+      .filter-brightness {
+        filter: brightness(0);
       }
 
       .hero-img {
@@ -43,11 +69,7 @@
       }
 
       @media (max-width: 576px) {
-        nav > input[type="checkbox"]:checked ~ a {
-          display: inline;
-        }
-
-        nav > input[type="checkbox"] ~ a {
+        nav > input[type="checkbox"]:not(:checked) ~ a {
           display: none;
         }
       }
@@ -61,18 +83,26 @@
       </div>
 
       <div class="text-ignite-purple text-center relative">
-
         <nav class="absolute pin-t pin-l pin-r sm:relative flex flex-col sm:flex-row justify-center items-center z-10">
           <div class="absolute pin bg-ignite-purple sm:hidden -z-10"></div>
           <label class="bg-ignite-purple text-ignite-white sm:hidden absolute pin-l pin-t" for="burger-menu">
             <img class="h-10 p-1 block" src="./images/menu-icon.png" alt="Menu Icon">
           </label>
           <input id="burger-menu" class="hidden" type="checkbox">
+          <a href="#">
+            <img class="h-10 sm:filter-invert" src="./images/ignite.png" alt="Ignite Logo">
+          </a>
           <a class="p-2 text-ignite-white sm:text-ignite-purple" href="./office-hours">Office Hours</a>
           <a class="p-2 text-ignite-white sm:text-ignite-purple" href="./faq">FAQ</a>
           <a class="p-2 text-ignite-white sm:text-ignite-purple" href="https://blog.ignite.io/">Blog</a>
           <a class="p-2 text-ignite-white sm:text-ignite-purple" href="./portfolio">Portfolio</a>
           <a class="p-2 text-ignite-white sm:text-ignite-purple" href="./contact">Contact</a>
+          <a class="p-2 hidden md:inline" href="https://www.twitter.com/igniteaccel">
+            <img class="h-10 filter-invert" src="./images/twitter.png" alt="Twitter Logo">
+          </a>
+          <a class="p-2 hidden md:inline" href="https://www.facebook.com/igniteaccelerator">
+            <img class="h-6 filter-grayscale filter-brightness" src="./images/facebook.png" alt="Facebook Logo">
+          </a>
         </nav>
 
         <div class="p-4 md:max-w-xl md:m-auto">
@@ -85,15 +115,15 @@
           <p class="py-4 sm:p-0 text-lg">
             We’ve been running pre-accelerator and accelerator programmes around the U.K. since 2011. Ignite has invested in 130+ businesses and has mentored and supported hundreds more. 
           </p>
-          <div class="inline-flex py-6 px-2">
+          <div class="flex sm:inline-flex flex-col sm:flex-row py-6 px-2">
             <div class="p-2">
-              <a class="p-2 sm:p-4 block border-2 border-ignite-purple rounded sm:text-lg text-ignite-purple no-underline hover:bg-ignite-purple hover:text-white transition-bg" href="https://igniteio.typeform.com/to/n59rRc">
-                Pre-Accelerator 
+              <a class="p-4 block border-2 border-ignite-purple rounded text-lg text-ignite-purple no-underline hover:bg-ignite-purple hover:text-white transition-bg" href="https://igniteio.typeform.com/to/n59rRc">
+                Pre-Accelerator
               </a>
             </div>
             <div class="p-2">
-              <a class="p-2 sm:p-4 block border-2 border-ignite-purple rounded sm:text-lg text-ignite-purple no-underline hover:bg-ignite-purple hover:text-white transition-bg" href="https://igniteio.typeform.com/to/CbneCC">
-                Aging Related
+              <a class="p-4 block border-2 border-ignite-purple rounded text-lg text-ignite-purple no-underline hover:bg-ignite-purple hover:text-white transition-bg" href="https://igniteio.typeform.com/to/CbneCC">
+                Accelerator
               </a>
             </div>
           </div>
