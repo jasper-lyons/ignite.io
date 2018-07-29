@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Ignite Accelerator </title>
+    <meta name="description" content="Ignite is a distributed startup support and investment network. Apply for 6 months location-independent support that works around your location, &pound;25,000 investment and much more.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <meta property="og:url" content="https://ignite.io" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ignite Accelerator" />
+    <meta property="og:description" content="Europe's #1 distributed startup support and investment network." />
+    <meta property="og:image" content="https://ignite.io/apple-touch-icon.png" />
+
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://ignite.io" />
+    <meta property="twitter:title" content="Ignite Accelerator" />
+    <meta property="twitter:description" content="Europe's #1 distributed startup support and investment network." />
+    <meta property="twitter:image" content="https://ignite.io/apple-touch-icon.png" />
+
+    <link rel="stylesheet" href="./app.css">
+    <style>
+      .opacity-10 {
+        opacity: .1;
+      }
+
+
+      .-z-10 {
+        z-index: -10;
+      }
+
+      .transition-bg {
+        transition: background 0.5s ease;
+      }
+
+      .transition-color {
+        transition: color 0.5s ease;
+      }
+
+      .filter-invert {
+        filter: invert(100%);
+      }
+
+      @media (min-width: 576px) {
+        .sm\:filter-invert {
+          filter: invert(100%);
+        }
+      }
+
+      .filter-grayscale {
+        filter: grayscale(100%);
+      }
+
+      .filter-brightness {
+        filter: brightness(0);
+      }
+
+      .hero-img {
+        background: center / cover no-repeat url("/images/hero.jpg");
+      }
+
+      .pre-accelerator-img {
+        background: 50% 35% / cover no-repeat url("/images/pre-accelerator.jpg");
+      }
+
+      .accelerator-img {
+        background: center / cover no-repeat url("/images/accelerator.jpg");
+      }
+
+      @media (max-width: 576px) {
+        nav > input[type="checkbox"]:not(:checked) ~ a {
+          display: none;
+        }
+      }
+
+      #portfolio h1 {
+        padding-top: 2em; 
+      }
+
+      #portfolio h2 {
+        padding-top: 1.5em; 
+      }
+
+      #portfolio h3 {
+        padding-top: 1em; 
+      }
+
+      #portfolio p,
+      #portfolio li {
+        padding-top: .5em;
+        line-height: 1.5rem;
+      }
+
+      #portfolio a {
+        color: #77428f;
+        line-height: 1.5rem;
+      }
+    </style>
+
+    <script>
+      // onces the view port is ~ past the header, change the nav bar to
+      // bg-purple, text-white
+      var set = false;
+
+      window.onscroll = function () {
+        var nav = document.querySelector('nav');
+        var navHeight = nav.getBoundingClientRect().height;
+
+        if (!set && this.scrollY > navHeight) {
+          nav.className += ' opaque-nav';
+          set = true;
+        } else if (set && this.scrollY < navHeight) {
+          nav.className = nav.className.replace(' opaque-nav', '');
+          set = false;
+        }
+      };
+    </script>
+  </head>
+  <body>
+
+    <header class="relative">
+      <div class="absolute pin h-full -z-10">
+        <div class="absolute pin -z-10 hero-img filter-grayscale opacity-10"></div>
+      </div>
+
+      <div class="text-ignite-purple text-center relative">
+        <div class="h-24"></div>
+        <nav class="fixed pin-t pin-l pin-r flex flex-col sm:flex-row justify-center items-center z-10">
+          <div class="absolute pin bg-ignite-purple sm:hidden -z-10"></div>
+          <label class="bg-ignite-purple text-ignite-white sm:hidden absolute pin-l pin-t" for="burger-menu">
+            <img class="h-10 p-1 block" src="./images/menu-icon.png" alt="Menu Icon">
+          </label>
+          <input id="burger-menu" class="hidden" type="checkbox">
+          <a href="./">
+            <img class="h-10 sm:filter-invert" src="./images/ignite.png" alt="Ignite Logo">
+          </a>
+          <a class="p-2 text-ignite-white sm:text-ignite-black" href="#programmes">Programmes</a>
+          <a class="p-2 text-ignite-white sm:text-ignite-black" href="#team">Team</a>
+          <a class="p-2 text-ignite-white sm:text-ignite-black" href="./office-hours">Office Hours</a>
+          <a class="p-2 text-ignite-white sm:text-ignite-black" href="./faq">FAQ</a>
+          <a class="p-2 text-ignite-white sm:text-ignite-black" href="https://blog.ignite.io/">Blog</a>
+          <a class="p-2 text-ignite-white sm:text-ignite-black" href="./portfolio">Portfolio</a>
+          <a class="p-2 text-ignite-white sm:text-ignite-black" href="./contact">Contact</a>
+          <a class="p-2 hidden md:inline" href="https://www.twitter.com/igniteaccel">
+            <img class="h-10 filter-invert" src="./images/twitter.png" alt="Twitter Logo">
+          </a>
+          <a class="p-2 hidden md:inline" href="https://www.facebook.com/igniteaccelerator">
+            <img class="h-6 filter-grayscale filter-brightness" src="./images/facebook.png" alt="Facebook Logo">
+          </a>
+        </nav>
+
+        <div class="p-4 md:max-w-xl md:m-auto">
+          <a class="sm:hidden" href="./">
+            <img class="h-24 filter-invert" src="./images/ignite.png" alt="Ignite Logo">
+          </a>
+          <h1 class="p-1 sm:px-2 sm:py-8 max-w-xl m-auto text-3xl sm:text-5xl font-semibold">
+            Portfolio Companies
+          </h1>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="portfolio" class="flex flex-col lg:flex-row max-w-xl m-auto">
+        <div class="p-8">
+          <p><a href="#2.0">Ignite 2.0 Companies</a></p>
+          <p><a href="#1.0">Ignite 1.0 Companies</a></p>
+        </div>
+
+        <div class="p-8 max-w-md">
+          <a href="" name="2.0"></a>
+          <h1 class="alumni-header-no-margin">Current cohort</h1>
+          <p class="alumni-text">
+            There are 12 startups on the first Ignite 2.0 programme. They are: 
+          </p>
+          <p class="alumni-text">
+          <a href="https://www.happity.co.uk/"><strong>Happity</strong></a> – A platform connecting parents and pre-school activity providers (a ~£2B market in the UK).
+          </p>
+          <p class="alumni-text">
+          <a href="https://heylangu.com/"><strong>Langu</strong></a> – A platform connecting language students with professional language teachers for live, one-to-one lessons in a virtual classroom.
+          </p>
+          <p class="alumni-text">
+          <a href="https://www.yooz.money/"><strong>Yooz</strong></a> – A money remittance service that supports low-value payments between the UK and India.
+          </p>
+          <p class="alumni-text">
+          <a href="https://prolifiko.com/"><strong>Prolifiko</strong></a> – A digital coach for writing, powered by persuasive technology and AI. Think Fitbit or Strava for writing. 
+          </p>
+          <p class="alumni-text">
+          <a href="https://debtcase.com/"><strong>DebtCase</strong></a> – Debt collection for the UK SME market, which is owed ~£0.5T.
+          </p>
+          <p class="alumni-text">
+          <a href="https://cghero.com/"><strong>CGHero</strong></a> – Connecting companies to a global community of approved industry CG artists to meet the demands of challenging creative projects.
+          </p>
+          <p class="alumni-text">
+          <a href="https://www.shoesie.co/"><strong>Shoesie</strong></a> – Fashion customisation &amp; ecommerce software that allows footwear brands to offer customisation, or NIKEiD for anyone.
+          </p>
+          <p class="alumni-text">
+          <a href="https://www.ourdailythread.co.uk/"><strong>Our Daily Thread</strong></a> – An editorial platform that democratically curates the latest and greatest fashion drops, daily.
+          </p>
+          <p class="alumni-text">
+          <a href="https://thewebshed.co/"><strong>theWebShed</strong></a> – Helping digital agencies improve how they manage and deliver the SEO campaigns they run for their clients.
+          </p>
+          <p class="alumni-text">
+          <a href="http://guardianangel.network/"><strong>Guardian Angel</strong></a> – Simplifying the bereavement process; connecting families with funeral directors and digitising the funeral directors’ offline processes. 
+          </p>
+          <p class="alumni-text">
+          <a href="https://www.currikula.com/"><strong>Currikula</strong></a> – A new way to improve essays and assignments; from reference management to bespoke feedback on students’ writing.
+          </p>
+          <p class="alumni-text">
+          <a href="http://link-big.com/"><strong>Link Big</strong></a> – The world’s first “link engine optimisation”, helping increase AOV/ROI from mobile assets, tailored and aligned to brands' and publishers' business goals.
+          </p>
+
+          <a href="" name="1.0"></a>
+          <h1 class="alumni-header">Previous cohorts</h1>
+          <p class="alumni-text">
+          We have been investing in and supporting startups around the UK since we launched our first programme in 2011. 
+          </p>
+          <p class="alumni-text">
+          Check back here in the coming weeks as we continue to add Ignite portfolio companies! 
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="p-4 bg-ignite-black text-sm leading-normal text-ignite-white flex flex-col md:flex-row justify-center">
+      <div class="w-64">
+        <a href="./" class="w-full">
+          <img class="block w-full" src="./images/ignite.png" alt="Ignite Logo">
+        </a>
+      </div>
+      <div class="w-64 py-4 px-8">
+        <p>
+          Ignite is a UK-based distributed startup support and investment network. Originally founded in Newcastle in 2011, Ignite has accelerated over 130 startups and invests in 10-20 companies per year.
+        </p>
+      </div>
+      <div class="w-48 py-4 px-8">
+        <ul class="list-reset">
+          <li><a class="text-ignite-white" href="#programmes">Programmes</a></li>
+          <li><a class="text-ignite-white" href="#team">Team</a></li>
+          <li><a class="text-ignite-white" href="./officehours">Office Hours</a></li>
+          <li><a class="text-ignite-white" href="./faq">FAQ</a></li>
+          <li><a class="text-ignite-white" href="https://blog.ignite.io">Blog</a></li>
+          <li><a class="text-ignite-white" href="./companies">Portfolio</a></li>
+          <li><a class="text-ignite-white" href="./contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="w-64 py-4 px-8">
+        <p class="footer-text">&copy; 2018 Ignite Holdings Ltd</p>
+        <p class="footer-text">Registered office:<br />Campus North<br />Sunco House<br />5 Carliol Square<br />Newcastle<br />NE1 6UF</p>
+      </div>
+    </footer>
+  </body>
+</html>
