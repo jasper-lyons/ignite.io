@@ -75,29 +75,29 @@
         }
       }
 
-      .opaque-nav {
+      #faq h1 {
+        padding-top: 2em; 
+      }
 
+      #faq h2 {
+        padding-top: 1.5em; 
+      }
+
+      #faq h3 {
+        padding-top: 1em; 
+      }
+
+      #faq p,
+      #faq li {
+        padding-top: .5em;
+        line-height: 1.5rem;
+      }
+
+      #faq a {
+        color: #77428f;
+        line-height: 1.5rem;
       }
     </style>
-
-    <script>
-      // onces the view port is ~ past the header, change the nav bar to
-      // bg-purple, text-white
-      var set = false;
-
-      window.onscroll = function () {
-        var nav = document.querySelector('nav');
-        var navHeight = nav.getBoundingClientRect().height;
-
-        if (!set && this.scrollY > navHeight) {
-          nav.className += ' opaque-nav';
-          set = true;
-        } else if (set && this.scrollY < navHeight) {
-          nav.className = nav.className.replace(' opaque-nav', '');
-          set = false;
-        }
-      };
-    </script>
   </head>
   <body>
     <header class="relative">
@@ -107,7 +107,7 @@
 
       <div class="text-ignite-purple text-center relative">
         <div class="h-24"></div>
-        <nav class="fixed pin-t pin-l pin-r flex flex-col sm:flex-row justify-center items-center z-10">
+        <nav class="absolute pin-t pin-l pin-r flex flex-col sm:flex-row justify-center items-center z-10">
           <div class="absolute pin bg-ignite-purple sm:hidden -z-10"></div>
           <label class="bg-ignite-purple text-ignite-white sm:hidden absolute pin-l pin-t" for="burger-menu">
             <img class="h-10 p-1 block" src="./images/menu-icon.png" alt="Menu Icon">
@@ -116,8 +116,8 @@
           <a href="./">
             <img class="h-10 sm:filter-invert" src="./images/ignite.png" alt="Ignite Logo">
           </a>
-          <a class="p-2 text-ignite-white sm:text-ignite-black" href="#programmes">Programmes</a>
-          <a class="p-2 text-ignite-white sm:text-ignite-black" href="#team">Team</a>
+          <a class="p-2 text-ignite-white sm:text-ignite-black" href="./#programmes">Programmes</a>
+          <a class="p-2 text-ignite-white sm:text-ignite-black" href="./#team">Team</a>
           <a class="p-2 text-ignite-white sm:text-ignite-black" href="./office-hours">Office Hours</a>
           <a class="p-2 text-ignite-white sm:text-ignite-black" href="./faq">FAQ</a>
           <a class="p-2 text-ignite-white sm:text-ignite-black" href="https://blog.ignite.io/">Blog</a>
@@ -143,265 +143,172 @@
     </header>
 
     <main>
-    <section id="faq" class="text-ignite-white">
-      <div class="bg-ignite-black">
-        <div class="p-6 sm:text-lg leading-normal md:max-w-lg md:m-auto flex flex-col md:flex-row">
-          <ul class="faq-links">
-            <li><a href="#faq1">About Ignite</a></li>
-            <li><a href="#faq2">What does 'distributed' mean?</a></li>
-            <li><a href="#faq3">Is this actually an accelerator programme?</a></li>
-            <li><a href="#faq3">How is this different from the old Ignite?</a></li>
-            <li><a href="#faq4">Who is behind this?</a></li>
-            <li><a href="#faq5">How can Ignite support my company?</a></li>
-            <li><a href="#faq6">What is expected of us if we join?</a></li>
-            <li><a href="#faq7">Why do you require us to join for 6 months?</a></li>
-            <li><a href="#faq8">What happens when we're done?</a></li>
-            <li><a href="#faq9">How much funding do you offer?</a></li>
-            <li><a href="#faq10">Do Ignite companies find it easier to raise money?</a></li>
-            <li><a href="#faq11">Is my company right for this?</a></li>
-            <li><a href="#faq12">I only have an idea, and no product built</a></li>
-            <li><a href="#faq13">We're not from the UK. Can we apply?</a></li>
-            <li><a href="#faq14">Where would we be based if accepted?</a></li>
-            <li><a href="#faq15">Do you provide office space?</a></li>
-            <li><a href="#faq16">Do you provide developers/technical resource?</a></li>
-            <li><a href="#faq17">What is the deadline to apply?</a></li>
-            <li><a href="#faq18">Do you accept sole founders?</a></li>
-            <li><a href="#faq19">Do you accept teams without developers?</a></li>
-            <li><a href="#faq20">How long does the application process take?</a></li>
-            <li><a href="#faq21">Do we get free stuff?</a></li>
+      <section id="faq" class="flex flex-col lg:flex-row max-w-xl m-auto">
+        <div class="p-8">
+          <p class="c30"><span class="c6"><a class="c0" href="#h.s1ws66iwbf5x">General</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.hh2qlr3vj0ff">Tell me more about Ignite</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.5ztpnpp1gf1t">Who is behind this?</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.3r2en66ykse6">How can Ignite support my company?</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.jjmucqe0bg1c">What is expected of my company if we apply and are accepted onto the programme?</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.4nt7rrpe8roi">Do companies that work with you find it easier to raise money?</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.fdsuku2gj5pn">I have an idea, but no product built yet, can Ignite still help me?</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.di4zorirxskd">We are not from the UK, can we still apply?</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.a50v4llf4zf7">Do you provide technical resource to help me build my product?</a></span></p>
+          <p class="c26"><span class="c6"><a class="c0" href="#h.j1hityvvafa4">Pre-Accelerator October 2018</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.40c71r8p6k5s">Pre-Accelerator: What is the Ignite Pre-Accelerator?</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.wfju3jjtrsyz">Pre-Accelerator: What will the programme cover?</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.9nbq68cavcfh">Pre-Accelerator: Who is it for?</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.lvjanm86dma2">Pre-Accelerator: How do I qualify?</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.5krcw43z1aau">Pre-Accelerator: What do you offer?</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.9tah6yc4yw6d">Pre-Accelerator: Do you provide office space?</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.9j6elzjlczdx">Pre-Accelerator: Are there any other benefits to joining Ignite (perks, freebies, tech etc)?</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.tcdr7ceejbrm">Pre-Accelerator: When is the deadline to apply?</a></span></p>
+          <p class="c26"><span class="c6"><a class="c0" href="#h.y10rhyf2s6h4">Accelerator January 2019</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.57cdimj7dmiq">Accelerator: What does ‘distributed’ mean?</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.nhkj8aayysn3">Accelerator: Is this actually an accelerator programme?</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.m117r6k56hzb">Accelerator: How is this different from the old Ignite?</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.17gps41e4d9o">Accelerator: What is expected of my company if we apply and are accepted?</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.tnsom4ibfo0u">Accelerator: What happens after 6 months? Are we on our own?</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.ysa7gl40k71d">Accelerator: How much funding do you offer?</a></span></p>
+          <p class="c5"><span>Accelerator: Wait</span><span><a class="c0" href="#h.oh0dys2fk69">, everyone else gets a share of our company?</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.2vwgg74k62yc">Accelerator: Is my company right for this? What type of startups do you work with?</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.5nk28vwc3vjz">Accelerator: Do you accept sole founder teams?</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.phfppawrb4t2">Accelerator: Do you accept teams without developers on the founding team?</a></span><span><a class="c0" href="#h.phfppawrb4t2">9</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.nlrehf3nbp34">Accelerator: How long does your application process take?</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.8zzsuwusp6wp">Accelerator: How do I qualify?</a></span></p>
+          <p class="c5"><span><a class="c0" href="#h.fcvvv69r43pf">Accelerator: Are there any other benefits to joining Ignite (perks, freebies, tech etc)?</a></span></p>
+        </div>
+
+        <div class="p-8 max-w-md">
+          <h1 class="c37" id="h.s1ws66iwbf5x"><span class="c12">General</span></h1>
+          <h2 class="c19" id="h.hh2qlr3vj0ff"><span class="c2">Tell me more about Ignite</span></h2>
+          <p class="c10"><span class="c4">Ignite is the UK’s first in-person and distributed startup support and investment network. We help founders from all over the UK take their startup to the next level. We are currently focusing on startups in the North East.</span></p>
+          <p class="c10"><span class="c9 c11">Mentorship, accountability, peer-to-peer learning, investment and preparedness for follow-on investment are all part of our programmes.</span> <span class="c9 c11">You get to stay where you’re already operating, whilst working with us in the 3 month pre-accelerator or 6 month accelerator programme.</span></p>
+          <p class="c10"><span class="c4">You’ll also be joining a 100+ strong family of startups on a mission to build healthy, scalable businesses and support each other in the process of doing so.</span></p>
+          <h2 class="c8" id="h.5ztpnpp1gf1t"><span class="c2">Who is behind this?</span></h2>
+          <p class="c10"><span class="c9 c11">The Ignite</span> <span class="c9 c11">team has delivered 16 accelerator programmes (investing in 130+ startups and supporting many hundreds more!) since we launched in 2011. We have a strong track record selecting and supporting promising companies, with businesses within the Ignite portfolio raising over</span> <span class="c9">£11m in</span><span class="c9">&nbsp;the first half of 2018.</span></p>
+          <p class="c10"><span class="c4">Every member of the Ignite programme team have founded and built businesses. We’ve raised investment, expanded internationally, acquired competitors, succeeded and failed. Collectively, we've also worked on more accelerator programmes than anyone else in Europe.</span></p>
+          <h2 class="c8" id="h.3r2en66ykse6"><span class="c2">How can Ignite support my company?</span></h2>
+          <p class="c10"><span class="c9 c11">We provide investment, accountability, mentorship and fundraising support tailored to the specific challenges you and your team face on a day to day basis. We draw from our own experiences as well as those of our investors, alumni and carefully selected mentors to provide you with actionable guidance aimed taking you from the idea stage, to MVP through to solid, scalable growth.</span></p>
+          <h2 class="c8" id="h.jjmucqe0bg1c"><span class="c2">What is expected of my company if we apply and are accepted onto the programme?</span></h2>
+          <p class="c10"><span class="c9 c11">Our aim is to give you support, whilst allowing you to experiment and operate in a non-disruptive manner. We expect you to commit to the programme by attending weekly review sessions, prioritising programme content and one-to-one sessions as well as our monthly offsites.</span></p>
+          <h2 class="c8" id="h.4nt7rrpe8roi"><span class="c2">Do companies that work with you find it easier to raise money?</span></h2>
+          <p class="c10"><span class="c4">Raising money is never easy, but teams that work with Ignite do have the unfair advantage of being supported up to the point where their model and metrics are in a highly investable stage. Add to this the large amount of exposure to investors that each team receives by taking part in the programme and you could claim that it makes this process easier.</span></p>
+          <p class="c10"><span class="c4">But we don’t believe in rushed funding rounds. We believe in raising at the right time for the right reasons and a large part of why we exist is to support founders in getting to that point.</span></p>
+          <h2 class="c8" id="h.fdsuku2gj5pn"><span class="c2">I have an idea, but no product built yet, can Ignite still help me?</span></h2>
+          <p class="c10"><span class="c4">We have a strong background in supporting founders from idea stage and upwards and we don’t plan on stopping now. Pre-product teams are eligible to apply for our Ignite pre-accelerator in Newcastle if they are based in the North East region.</span></p>
+          <h2 class="c8" id="h.di4zorirxskd"><span class="c2">We are not from the UK, can we still apply?</span></h2>
+          <p class="c10"><span class="c4">Yes. However, you must be willing to register your company as a UK Limited Company and operate as a UK-based entity which will require you to reside somewhere in the UK for a period of time in order to open a bank account and deal with other company setup items. For the 2018 Pre-accelerator and the 2019 Accelerator programmes, you’ll need to be based somewhere in the North East to qualify.</span></p>
+          <h2 class="c8" id="h.a50v4llf4zf7"><span>Do you provide technical resource to help me build my product?</span></h2>
+          <p class="c10"><span class="c4">No. We will help you with how best to hire quality people to join your team, but we don't have staffing resource that you can access.</span></p>
+          <p class="c7"></p>
+          <p class="c7"></p>
+          <h1 class="c8" id="h.j1hityvvafa4"><span class="c12">Pre-Accelerator October 2018</span></h1>
+          <p class="c14 c16"></p>
+          <h2 class="c3" id="h.40c71r8p6k5s"><span class="c2">Pre-Accelerator: What is the Ignite Pre-Accelerator?</span></h2>
+          <p class="c14"><span class="c1">The pre-accelerator is a 3-month intensive full-time programme that helps founders and entrepreneurs to develop their business idea, understand the steps they need to take to launch an MVP and get their first customers. If the business is the type that needs follow-on investment, we’ll help the entrepreneurs get investment ready too.</span></p>
+          <p class="c14 c16"></p>
+          <h2 class="c3" id="h.wfju3jjtrsyz"><span class="c2">Pre-Accelerator: What will the programme cover?</span></h2>
+          <ul class="c20 lst-kix_7wi7o29tpj4k-0 start">
+            <li class="c14 c15"><span class="c1">Customer Conversations & Idea Validation</span></li>
+            <li class="c14 c15"><span class="c1">Building An MVP</span></li>
+            <li class="c14 c15"><span class="c1">Spreading The Word</span></li>
+            <li class="c14 c15"><span class="c1">Launching to the world</span></li>
+            <li class="c14 c15"><span>Money and financing</span></li>
           </ul>
-          <div class="">
-            <a name="faq1"></a>
-            <h3 class="faq-header-no-margin">Tell me more about Ignite</h3>
-
-            <p class="faq-text">
-            Ignite is the UK’s first distributed startup support and investment network. We help founders from all over the UK take their startup to the next level by providing all the support of a traditional accelerator programme without the need for relocation.
-            </p>
-            <p class="faq-text">
-            Mentorship, accountability, peer-to-peer learning, investment and preparedness for follow-on investment are all part of our programme, you just get to stay where you’re already operating whilst working with us for a minimum of 6 months.
-            </p>
-            <p class="faq-text">
-            Our programme has rolling applications. This means that you can apply, be accepted and start to benefit from our support very quickly, without waiting for a new ‘programme’ to start.
-            </p>
-            <p class="faq-text">
-            You’ll also be joining a 130+ strong family of startups on a mission to build healthy, scalable businesses and support each other in the process of doing so.
-            </p>
-
-
-            <a name="faq2"></a>
-            <h3 class="faq-header">What does ‘distributed’ mean?</h3>
-            <p class="faq-text">
-            We work everywhere. A traditional accelerator programme has always required that founders move to its operating city in order to participate; we do not ask for this. If founders have a business up and running, moving some or all of a team to a new city for a period of time can be a disruptive event that should be avoided.
-            </p>
-            <p class="faq-text">
-            We’ll spend a week with you in person when you first join the programme getting to know you and your business. We’ll have a call with you every week to see how you’re progressing and what else you need help with, and we’ll do regular sessions both remotely and in-person to give you the support you need to grow your business.
-            </p>
-            <p class="faq-text">
-            Once a month we bring all our startups together for an offsite in a different UK city for two days. There you get the chance to dig in on specific topics in 1-1 mentoring and group workshops, share learning, and meet with other teams. You leave with actionable advice to implement immediately.
-            </p>
-
-
-            <a name="faq3"></a>
-            <h3 class="faq-header">Is this actually an accelerator programme?</h3>
-            <p class="faq-text">
-            You’ll find a lot of the same elements as an accelerator programme here but with an additional focus on you continuing to operate as a company in your home location.
-            </p>
-            <p class="faq-text">
-            You’ll still get mentorship, you’ll still get investment as part of joining, you’ll still be meeting and working with other excellent founders but, you’ll also be able to stay focussed on your business whilst working with us for a minimum of 6 months to ensure that you’re as strong as you need to be to push yourselves forward.
-            </p>
-
-
-            <a name="faq4"></a>
-            <h3 class="faq-header">How is this different from the old Ignite?</h3>
-            <p class="faq-text">
-            This new approach is an evolution of the original Ignite design and pulls from many of its best traits. What makes Ignite different is the focus on longer term support, building businesses that will scale, not chasing mythical creatures in terms of valuations and ensuring that founders are in the best place possible, both personally and business wise when it comes to raising follow on funding rounds.
-            </p>
-
-            <a name="faq5"></a>
-            <h3 class="faq-header">Who is behind this?</h3>
-            <p class="faq-text">
-            Our team have accelerated more than 130 startups since 2011 and have a strong track record selecting and supporting promising companies, with our portfolio raising over £20m in 2016 alone.
-            </p>
-            <p class="faq-text">
-            The majority of us have founded businesses, raised investment, created apps, launched products, been knocked down, got back up. We’ve walked a mile in plenty of shoes. Collectively, we've worked on more accelerator programmes than anyone else in Europe.
-            </p>
-
-
-            <a name="faq6"></a>
-            <h3 class="faq-header">How can Ignite support my company?</h3>
-            <p class="faq-text">
-            We provide investment, accountability, mentorship and fundraising support tailored to the specific challenges you and your team face on a day to day basis. We draw from our own experiences as well as those of our investors, alumni and carefully selected mentors to provide you with actionable guidance aimed taking you from MVP through to solid growth.
-            </p>
-
-
-            <a name="faq7"></a>
-            <h3 class="faq-header">What is expected of my company if we apply and are accepted?</h3>
-            <p class="faq-text">
-            Our aim is to give you support, whilst allowing you to experiment and operate in a non-disruptive manner. To this end, we expect you to work with us for a minimum of 6 months. During this time you will only be away from your home city for a maximum of 18 days.
-            </p>
-            <p class="faq-text">
-            We expect you to commit to the programme by attending weekly review sessions, prioritising programme content and one-to-one sessions as well as our monthly off-sites in whatever city they take place in.
-            </p>
-
-            <a name="faq8"></a>
-            <h3 class="faq-header">Why do you require teams to work with you for at least 6 months?</h3>
-            <p class="faq-text">
-            We have found that this is the average amount of time we work with a company and has previously consisted of 3 months of support via a programme, followed by 3 months of alumni and fundraising support as a company puts its seed round together.
-            </p>
-            <p class="faq-text">
-            We don’t feel that rushing teams into fundraising after 3 months is suitable for every business as some require more time to prove their models and metrics are sustainable and scalable. We have extended the time we work with teams to accommodate this.
-            </p>
-
-            <a name="faq9"></a>
-            <h3 class="faq-header">What happens after 6 months? Are we on our own?</h3>
-            <p class="faq-text">
-            No, we will continue to help as you move forward with your business.
-            </p>
-            <p class="faq-text">
-            You are welcome to join offsites after the mandatory period of 6 months and can benefit from sessions that are relevant to you. Our support doesn’t end and you are encouraged to update the network and ask for help.
-            </p>
-
-            <a name="faq10"></a>
-            <h3 class="faq-header">How much funding do you offer?</h3>
-            <p class="faq-text">
-            We offer £40,000 for 5% of ordinary share equity in your company. Of this investment, we charge a fee of £15,000 for your time with us which means that your net investment is £25,000 (GBP).
-            </p>
-            <p class="faq-text">
-            In addition to this funding, we expect companies to contribute a further 1% ordinary share equity to a shared pool that we call <em>The Founders Cooperative</em>. This pool is made up of the Ignite team, and every other company we invest in and work with. Through this mechanism, everyone has a small vested interest in helping everyone else succeed.
-            </p>
-            <p class="faq-text">
-            The total equity you will give over to work with Ignite is 6%.
-            </p>
-
-
-
-            <h3 class="faq-header">Wait, everyone else gets a share of our company?</h3>
-            <p class="faq-text">
-            Yes. You also get a slice of everyone else’s companies as well. We all do. It’s the price of admission into a group of likeminded founders who want to build successful companies and support other founders whilst they do it.
-            </p>
-            <p class="faq-text">
-            Think of it as a cooperative of startups: sharing knowledge, experience and successes.
-            </p>
-
-
-            <a name="faq11"></a>
-            <h3 class="faq-header">Do companies that work with you find it easier to raise money?</h3>
-            <p class="faq-text">
-            Raising money is never easy, but teams that work with Ignite do have the unfair advantage of being supported up to the point where their model and metrics are in a highly investable stage. Add to this the large amount of exposure to investors that each team receives by taking part in the programme and you could claim that it makes this process easier.
-            </p>
-            <p class="faq-text">
-            We don’t believe in rushed funding rounds. We believe in raising at the right time for the right reasons and a large part of why we exist is to support founders in getting to that point.
-            </p>
-
-
-            <a name="faq12"></a>
-            <h3 class="faq-header">Is my company right for this? What type of startups do you work with?</h3>
-            <p class="faq-text">
-            We are looking for companies that have a product built and either already have customers and/or revenue, or are now in a position to open their doors to customers.
-            </p>
-            <p class="faq-text">
-            If you have already raised investment elsewhere we are still happy to talk and consider you as long as you are happy with the equity only offer outlined above.
-            </p>
-            <p class="faq-text">
-            If you're unsure then get in touch and ask. If in doubt, apply any way, what have you got to lose?
-            </p>
-
-
-            <a name="faq13"></a>
-            <h3 class="faq-header">I have an idea, but no product built yet, can Ignite still help me?</h3>
-            <p class="faq-text">
-            We have a strong background in supporting founders from idea stage and upwards and we don’t plan on stopping now. Although pre-product teams are not eligible to apply for Ignite, we also run a programme for founders looking for support around developing their idea and getting their first minimum viable product out the door.
-            </p>
-
-            <a name="faq14"></a>
-            <h3 class="faq-header">We are not from the UK, can we still apply?</h3>
-            <p class="faq-text">
-            Yes. However, you must be willing to register your company as a UK Limited Company and operate as a UK-based entity which will require you to reside somewhere in the UK for a period of time in order to open a bank account and deal with other company setup items. Although you can stay in whatever country you are based now, you will be expected to travel to the UK for 2-3 days every month for at least the first 6 months of your time working with us.
-            </p>
-            <p class="faq-text">
-            Ignite does not provide visas as part of joining the programme. However, for founders that do require visas we will consider supporting your application through the Tech Nation Visa Scheme.
-            </p>
-
-
-            <a name="faq15"></a>
-            <h3 class="faq-header">Where would we be based if we are accepted to join?</h3>
-            <p class="faq-text">
-            You will be based wherever you are right now. You will only be required to be away working with us in person for 2-3 days per month.
-            </p>
-
-
-            <a name="faq16"></a>
-            <h3 class="faq-header">Do you provide office space?</h3>
-            <p class="faq-text">
-            No. You are welcome to stay where you are now so we don’t provide space for teams to work in any city. However, if you want to move into a local co-working space or link up with other Ignite companies and share an office then you are encouraged to do so.
-            </p>
-            <p class="faq-text">
-            If you're in the North East then we highly recommend that you check out Campus North, who offer free co-working during the day in their main space.
-            </p>
-
-            <h3 class="faq-header">Do you provide technical resource to help me build my product?</h3>
-            <p class="faq-text">
-            No. We will help you with how best to hire quality people to join your team, but we don't have staffing resource that you can access.
-            </p>
-
-
-            <a name="faq17"></a>
-            <h3 class="faq-header">When is the deadline to apply?</h3>
-            <p class="faq-text">
-            There isn’t one. We have a rolling application process that means we can work with founders at any time. If you’re interested in applying the best way to start is to fill out our application form and we’ll be in touch soon after that.
-            </p>
-
-
-            <a name="faq18"></a>
-            <h3 class="faq-header">Do you accept sole founder teams?</h3>
-            <p class="faq-text">
-            In certain circumstances, yes. If you are a sole founder and also the main developer of your product then we would be happy to hear from you. Additionally, if you are a sole founder but you employ a technical lead or additional technical team members at present then that will also qualify.
-            </p>
-            <p class="faq-text">
-            If you are a sole founder but you have no means of developing further elements of your product then we won’t be able to accept you.
-            </p>
-            <p class="faq-text">
-            Our idea team make up is minimum two founders, one of whom is leading technical development.
-            </p>
-            <p class="faq-text">
-            If you are uncertain as to whether or not you meet the criteria, please contact us and we’ll discuss it with you.
-            </p>
-
-            <a name="faq19"></a>
-            <h3 class="faq-header">Do you accept teams without developers on the founding team?</h3>
-            <p class="faq-text">
-            It most cases no, but if you do have means by which to improve and develop your product then we’ll still consider your application. This means that if you are working with freelance developers, or have a developer working with you outside of the founding team, we can talk. We also have no problem with developers who are working elsewhere in the world as long as they are committed to the company full time.
-            </p>
-
-
-            <a name="faq20"></a>
-            <h3 class="faq-header">How long does your application process take?</h3>
-            <p class="faq-text">
-            We aim to have an initial response back to you within 7 days of your initial application. If we aren’t going to progress your application further then we will be very clear about this and give you reasons why. In some cases, we may opt to follow your progress for a few more months before talking again.
-            </p>
-            <p class="faq-text">
-            If we decide to progress with your application then the next step will be to have an introductory call with one of the Ignite team so we can better assess what you and your company have achieved up to that point and begin to understand the areas where you can be best supported.
-            </p>
-            <p class="faq-text">
-            We aim to make quick decisions based on conversations with the founding team but we may also ask that you speak with investors and/or alumni and at least two members of the Ignite team before we make our decision.
-            </p>
-            <p class="faq-text">
-            You can break down the process into these stages:<br /><br />
-            Stage 1: Submit your application<br />
-            Stage 2: Initial call with the Ignite team<br />
-            Stage 3: Join us as a prospective team at our next offsite<br />
-            Stage 4: Join the programme
-            </p>
-
-            <a name="faq21"/></a>
-            <h3 class="faq-header">Are there any other benefits to joining Ignite (perks, freebies, tech etc)?</h3>
-            <p class="faq-text">
-            Teams accepted to work with Ignite are eligible for benefits from some fantastic companies, including Amazon Web Services, Google Cloud Platform, Digital Ocean, GitHub, SendGrid, Nexmo, Autopilot, Stripe and more. We aim to have representatives of all of our technology partners present to support you at some stage during your time with us.
-            </p>
-
-          </div>
-      </div>
-    </section>
+          <p class="c14 c16"></p>
+          <h2 class="c3" id="h.9nbq68cavcfh"><span class="c2">Pre-Accelerator: Who is it for?</span></h2>
+          <p class="c14"><span class="c24 c9">We are looking for entrepreneurs who want to solve (or already solving) real-world problems with innovative technology-led ideas. Tapping into the region’s world-class expertise in both data and ageing, we are especially keen to talk to founders looking to work on ageing-related or data-driven issues.</span></p>
+          <p class="c14"><span class="c9 c24">Some of the challenges we’re looking for pre-accelerator businesses to potentially tackle include:</span></p>
+          <ul class="c20 lst-kix_irmip0h77lts-0 start">
+            <li class="c14 c15"><span class="c27 c9">What technologies can empower older people?</span></li>
+            <li class="c14 c15"><span class="c9 c27">How can product design and marketing be adapted to appeal across the generations?</span></li>
+            <li class="c14 c15"><span class="c27 c9">How can we manage personal data securely and ethically?</span></li>
+            <li class="c14 c15"><span class="c27 c9">How will data-driven technology disrupt healthcare to provide quicker, better access to services and outcomes?</span></li>
+          </ul>
+          <h2 class="c3 c32" id="h.lvjanm86dma2"><span class="c2">Pre-Accelerator: How do I qualify?</span></h2>
+          <p class="c14"><span class="c24 c9">To qualify for the pre-accelerator programme, each founder/ team must have a UK LTD company (with a UK business bank account) with less than 250 employees and balance sheet total &lt;€43 million and/or turnover &lt;€50 million. You must also be based/ have a material presence in the North East (County Durham, Northumberland and Tyne and Wear).</span></p>
+          <p class="c14 c16"></p>
+          <p class="c14"><span class="c24 c9">If you you haven’t registered a business or built a product or even founded a team, you can still contact us or apply and we’ll do our best to help.</span></p>
+          <p class="c14 c16"></p>
+          <h2 class="c3" id="h.5krcw43z1aau"><span class="c2">Pre-Accelerator: What do you offer?</span></h2>
+          <ul class="c20 lst-kix_rbbj06m9cyyv-0 start">
+            <li class="c14 c15"><span class="c24 c9">£15,000 convertible loan. Of this investment, we charge a fee of £5,000 for your time with us which means that your net investment is £10,000 (GBP),</span></li>
+            <li class="c14 c15"><span class="c24 c9">Mentoring, business support and guidance,</span></li>
+            <li class="c14 c15"><span class="c24 c9">Office space in Newcastle for the duration of the programme (with the potential for discounted post-programme space),</span></li>
+            <li class="c14 c15"><span class="c9 c36">Ignite Perks (see below)</span></li>
+          </ul>
+          <p class="c14 c16"></p>
+          <h2 class="c3" id="h.9tah6yc4yw6d"><span class="c2">Pre-Accelerator: Do you provide office space?</span></h2>
+          <p class="c14"><span class="c1">Yes. You will be based in an office space in central Newcastle.</span></p>
+          <p class="c14 c16"></p>
+          <h2 class="c3 c32" id="h.9j6elzjlczdx"><span class="c2">Pre-Accelerator: Are there any other benefits to joining Ignite (perks, freebies, tech etc)?</span></h2>
+          <p class="c10"><span class="c4">Teams accepted to work with Ignite are eligible for benefits from some fantastic companies, including Amazon Web Services, Google Cloud Platform, Digital Ocean, GitHub, SendGrid, Nexmo, Autopilot, Stripe and more. We aim to have representatives of all of our technology partners present to support you at some stage during your time with us.</span></p>
+          <h2 class="c8" id="h.tcdr7ceejbrm"><span class="c2">Pre-Accelerator: When is the deadline to apply?</span></h2>
+          <p class="c10"><span class="c9 c11">Application deadline is the</span><span class="c9 c6 c11 c22">&nbsp;7th of September 2018.</span></p>
+          <h1 class="c28" id="h.jcntmfcxymm"></h1>
+          <h1 class="c31" id="h.y10rhyf2s6h4"><span>Accelerator January 2019</span></h1>
+          <h2 class="c29" id="h.57cdimj7dmiq"><span class="c18 c11">Accelerator:</span> <span class="c2">What does ‘distributed’ mean?</span></h2>
+          <p class="c10"><span class="c4">We work everywhere. A ‘traditional’ accelerator programme has always required its founders move to a central location in order to participate. We do not ask for this. If founders have a business up and running, moving some or all of a team to a new city for a period of time can be a disruptive event that should be avoided. We only require you to be based in the North East.</span></p>
+          <p class="c10"><span class="c4">We’ll spend a week with you in person when you first join the programme getting to know you and your business. We’ll have a call with you every week to see how you’re progressing and what else you need help with, and we’ll do regular sessions both remotely and in-person to give you the support you need to grow your business.</span></p>
+          <p class="c10"><span class="c4">Once a month we bring all our startups together for an offsite in Newcastle for two days. There you get the chance to dig in on specific topics in 1-1 mentoring and group workshops, share learning, and meet with other teams. You leave with actionable advice to implement immediately.</span></p>
+          <h2 class="c29" id="h.nhkj8aayysn3"><span class="c18 c11">Accelerator:</span> <span class="c2">Is this actually an accelerator programme?</span></h2>
+          <p class="c10"><span class="c4">You’ll find a lot of the same elements as an accelerator programme here but with an additional focus on you continuing to operate as a company in your home location.</span></p>
+          <p class="c10"><span class="c4">You’ll still get mentorship, you’ll still get investment as part of joining, you’ll still be meeting and working with other excellent founders but, you’ll also be able to stay focused on your business whilst working with us for a minimum of 6 months to ensure that you’re as strong as you need to be to push yourselves forward.</span></p>
+          <h2 class="c29" id="h.m117r6k56hzb"><span class="c18 c11">Accelerator:</span> <span class="c2">How is this different from the old Ignite?</span></h2>
+          <p class="c10"><span class="c4">This new approach is an evolution of the original Ignite design and pulls from many of its best traits. What makes Ignite different is the focus on longer-term support, building businesses that will scale, not chasing mythical creatures in terms of valuations and ensuring that founders are in the best place possible, both personally and business-wise, when it comes to raising follow-on investment.</span></p>
+          <h2 class="c29" id="h.17gps41e4d9o"><span class="c2">Accelerator: What is expected of my company if we apply and are accepted?</span></h2>
+          <p class="c10"><span class="c1">Our aim is to give you support, whilst allowing you to experiment and operate in a non-disruptive manner. To this end, we expect you to work with us for a minimum of 6 months. During this time you will only be away from your home city for a maximum of 18 days.<br>
+            <br>
+            We expect you to commit to the programme by attending weekly review sessions, prioritising programme content and one-to-one sessions as well as our monthly off-sites in whatever city they take place in.</span></p>
+          <p class="c7"></p>
+          <p class="c10"><span class="c2">Why do you require teams to work with you for at least 6 months?</span></p>
+          <p class="c10"><span class="c1"><br>
+            We have found that this is the average amount of time we work with a company and has previously consisted of 3 months of support via a programme, followed by 3 months of alumni and fundraising support as a company puts its seed round together.<br>
+            <br>
+            We don’t feel that rushing teams into fundraising after 3 months is suitable for every business as some require more time to prove their models and metrics are sustainable and scalable. We have extended the time we work with teams to accommodate this.</span></p>
+          <h2 class="c29" id="h.tnsom4ibfo0u"><span class="c2">Accelerator: What happens after 6 months? Are we on our own?</span></h2>
+          <p class="c10"><span class="c1">No, we will continue to help as you move forward with your business.<br>
+            <br>
+            You are welcome to join offsites after the mandatory period of 6 months and can benefit from sessions that are relevant to you. Our support doesn’t end and you are encouraged to update the network and ask for help.</span></p>
+          <h2 class="c29" id="h.ysa7gl40k71d"><span class="c2">Accelerator: How much funding do you offer?</span></h2>
+          <p class="c10"><span class="c1">We offer £40,000 for 5% of ordinary share equity in your company. Of this investment, we charge a fee of £15,000 for your time with us which means that your net investment is £25,000 (GBP).<br>
+            <br>
+            In addition to this funding, we expect companies to contribute a further 1% ordinary share equity to a shared pool that we call The Founders Cooperative. This pool is made up of the Ignite team, and every other company we invest in and work with. Through this mechanism, everyone has a small vested interest in helping everyone else succeed.<br>
+            <br>
+            The total equity you will give over to work with Ignite is 6%.</span></p>
+          <h2 class="c29" id="h.oh0dys2fk69"><span class="c2">Wait, everyone else gets a share of our company?<br></span></h2>
+          <p class="c10"><span class="c1">Yes. You also get a slice of everyone else’s companies as well. We all do. It’s the price of admission into a group of likeminded founders who want to build successful companies and support other founders whilst they do it.<br>
+            <br>
+            Think of it as a cooperative of startups: sharing knowledge, experience and successes.</span></p>
+          <h3 class="c8" id="h.2vwgg74k62yc"><span class="c11 c18">Accelerator: Is my company right for this? What type of startups do you work with?</span></h3>
+          <p class="c7"></p>
+          <p class="c10"><span class="c4">For the accelerator we are looking for companies that have a product built and either already have customers and/or revenue, or are now in a position to open their doors to customers.</span></p>
+          <p class="c10"><span class="c4">If you have already raised investment elsewhere we are still happy to talk and consider you as long as you are happy with the equity only offer outlined above.</span></p>
+          <p class="c10"><span class="c4">If you're unsure then get in touch and ask. If in doubt, apply any way.</span></p>
+          <p class="c10"><span class="c9 c11">What have you got to lose?</span></p>
+          <h3 class="c8" id="h.5nk28vwc3vjz"><span class="c13 c11">Accelerator: Do you accept sole founder teams?</span></h3>
+          <p class="c10"><span class="c4">In certain circumstances, yes. If you are a sole founder and also the main developer of your product then we would be happy to hear from you. Additionally, if you are a sole founder but you employ a technical lead or additional technical team members at present then that will also qualify.</span></p>
+          <p class="c10"><span class="c4">If you are a sole founder but you have no means of developing further elements of your product then we won’t be able to accept you.</span></p>
+          <p class="c10"><span class="c4">Our idea team make up is minimum two founders, one of whom is leading technical development.</span></p>
+          <p class="c10"><span class="c9 c11">If you are uncertain as to whether or not you meet the criteria, please contact us and we’ll discuss it with you.</span></p>
+          <h3 class="c8" id="h.phfppawrb4t2"><span class="c13 c11">Accelerator: Do you accept teams without developers on the founding team?</span></h3>
+          <p class="c10"><span class="c4">It most cases no, but if you do have means by which to improve and develop your product then we’ll still consider your application. This means that if you are working with freelance developers, or have a developer working with you outside of the founding team, we can talk. We also have no problem with developers who are working elsewhere in the world as long as they are committed to the company full time.</span></p>
+          <h3 class="c8" id="h.nlrehf3nbp34"><span class="c13 c11">Accelerator: How long does your application process take?</span></h3>
+          <p class="c10"><span class="c4">We aim to have an initial response back to you within 7 days of your initial application. If we aren’t going to progress your application further then we will be very clear about this and give you reasons why. In some cases, we may opt to follow your progress for a few more months before talking again.</span></p>
+          <p class="c10"><span class="c4">If we decide to progress with your application then the next step will be to have an introductory call with one of the Ignite team so we can better assess what you and your company have achieved up to that point and begin to understand the areas where you can be best supported.</span></p>
+          <p class="c10"><span class="c4">We aim to make quick decisions based on conversations with the founding team but we may also ask that you speak with investors and/or alumni and at least two members of the Ignite team before we make our decision.</span></p>
+          <p class="c10"><span class="c4">You can break down the process into these stages:</span></p>
+          <p class="c10"><span class="c4">Stage 1: Submit your application</span></p>
+          <p class="c10"><span class="c4">Stage 2: Initial call with the Ignite team</span></p>
+          <p class="c10"><span class="c4">Stage 3: In person interview</span></p>
+          <p class="c10"><span class="c9 c11">Stage 4: Join the programme</span></p>
+          <h2 class="c3" id="h.8zzsuwusp6wp"><span class="c2">Accelerator: How do I qualify?</span></h2>
+          <p class="c14"><span class="c24 c9">To qualify for the accelerator programme, each founder/ team must have a UK LTD company (with a UK business bank account) with less than 250 employees and balance sheet total &lt;€43 million and/or turnover &lt;€50 million. You must also be based/ have a material presence in the North East (County Durham, Northumberland and Tyne and Wear).</span></p>
+          <h3 class="c8" id="h.fcvvv69r43pf"><span class="c13 c11">Accelerator: Are there any other benefits to joining Ignite (perks, freebies, tech etc)?</span></h3>
+          <p class="c10"><span class="c4">Teams accepted to work with Ignite are eligible for benefits from some fantastic companies, including Amazon Web Services, Google Cloud Platform, Digital Ocean, GitHub, SendGrid, Nexmo, Autopilot, Stripe and more. We aim to have representatives of all of our technology partners present to support you at some stage during your time with us.</span></p>
+        </div>
+      </section>
     </main>
 
     <footer class="p-4 bg-ignite-black text-sm leading-normal text-ignite-white flex flex-col md:flex-row justify-center">
@@ -417,8 +324,8 @@
       </div>
       <div class="w-48 py-4 px-8">
         <ul class="list-reset">
-          <li><a class="text-ignite-white" href="#programmes">Programmes</a></li>
-          <li><a class="text-ignite-white" href="#team">Team</a></li>
+          <li><a class="text-ignite-white" href="./#programmes">Programmes</a></li>
+          <li><a class="text-ignite-white" href="./#team">Team</a></li>
           <li><a class="text-ignite-white" href="./officehours">Office Hours</a></li>
           <li><a class="text-ignite-white" href="./faq">FAQ</a></li>
           <li><a class="text-ignite-white" href="https://blog.ignite.io">Blog</a></li>
